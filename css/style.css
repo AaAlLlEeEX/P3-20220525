@@ -156,15 +156,10 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: 0.7em;
 }
 
-.restaurant-main {
-    display: flex;
-    justify-content: center;
-}
-
 .restaurant-main a {
     display: block;
     position: relative;
-    width: 90%;
+    width: 40%;
     height: 250px;
     margin-top: 1.2em;
     margin-left: 1.5em;
@@ -244,6 +239,110 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: 0.5rem;
 }
 
+/*cartes*/
+
+.main-div-logo i {
+    display: flex;
+    position: absolute;
+    left: 15px;
+    top: 40px;
+    font-size: 1.2rem;
+    color: #000;
+}
+
+.main-header-photo img {
+    max-width: 100%;
+    max-height: 380px;
+    width: 100%;
+    object-fit: cover;
+    margin-top: 1em;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+}
+
+.main-content-list {
+    width: 95%;
+    background-color: #f6f6f6;
+    border-radius: 2rem 2rem 0 0
+}
+
+.main-content-list-header {
+    display: block;
+    position: relative;
+    font-size: 1em;
+    font-family: 'Shrikhand', sans-serif;
+    margin-top: 2em;
+}
+
+.main-content-list-header i {
+    position: absolute;
+    right: 30px;
+    top: 5px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.main-entries {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-entries h3 {
+    margin-top: 2.5em;
+    margin-left: 1em;
+    font-weight: 400;
+}
+
+.main-entries-list {
+    display: flex;
+    position: relative;
+    margin-left: 1em;
+    background-color: #f5f5f5;
+    width: 90%;
+    border-radius: 12px;
+    margin-top: 1em;
+    box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+}
+
+.main-entries-list:hover {
+    cursor: pointer;
+}
+
+.main-entries-list:hover .checked {
+    width: 100px;
+    opacity: 1;
+}
+
+.main-entries-list div:nth-child(1) {
+    flex: 1;
+    padding: 10px 15px;
+    overflow: hidden;
+}
+
+.main-entries-list p,
+.main-entries-list h4 {
+    margin-bottom: 0.3em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.checked {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0;
+    font-weight: 600;
+    color: white;
+    background-color: aquamarine;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    opacity: 0;
+}
+
 @media screen and (max-width: 768px) {
     /*Page d'acceuil*/
     .container {
@@ -316,7 +415,7 @@ h1, h2, h3, h4, h5, h6 {
         cursor: pointer;  
         background-color: #686868;  
         background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
-        box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+        box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
     }
 
     .working {
@@ -558,13 +657,24 @@ h1, h2, h3, h4, h5, h6 {
         box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
     }
 
+    .main-entries-list:hover {
+        cursor: pointer;
+    }
+
+    .main-entries-list:hover .checked {
+        width: 100px;
+        opacity: 1;
+    }
+
     .main-entries-list div:nth-child(1) {
         flex: 1;
         padding: 10px 15px;
+        overflow: hidden;
     }
 
-    .main-entries-list p {
-        margin-top: 0.3em;
+    .main-entries-list p,
+    .main-entries-list h4 {
+        margin-bottom: 0.3em;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -574,13 +684,13 @@ h1, h2, h3, h4, h5, h6 {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100px;
-        padding: 10px;
+        width: 0;
         font-weight: 600;
         color: white;
         background-color: aquamarine;
         border-top-right-radius: 12px;
         border-bottom-right-radius: 12px;
+        opacity: 0;
     }
 
     .main-dishes {
