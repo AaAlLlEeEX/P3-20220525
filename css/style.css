@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
 
 body {
@@ -87,7 +88,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .main-header a:hover {
-    box-shadow: 0.50rem 0.50rem 20px #000;
+    box-shadow: 0.50rem 0.50rem 20px gray;
 }
 
 .working h2 {
@@ -98,7 +99,6 @@ h1, h2, h3, h4, h5, h6 {
 .main-working {
     display: flex;
     justify-content: space-between;
-    margin-right: 3em;
 }
 
 .working ul {
@@ -109,7 +109,6 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     position: relative;
     background-color: #f5f5f5;
-    width: 100%;
     border-radius: 5px 5px 5px 5px;
     padding: 20px 70px;
     margin-top: 1em;
@@ -142,7 +141,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .restaurant {
     display: flex;
-    justify-content: space-between;
 }
 
 .restaurant-main-list {
@@ -250,6 +248,11 @@ h1, h2, h3, h4, h5, h6 {
     color: #000;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+}
+
 .main-header-photo img {
     max-width: 100%;
     max-height: 380px;
@@ -301,7 +304,7 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     margin-left: 1em;
     background-color: #f5f5f5;
-    width: 90%;
+    width: 30%;
     border-radius: 12px;
     margin-top: 1em;
     box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
@@ -341,6 +344,31 @@ h1, h2, h3, h4, h5, h6 {
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
     opacity: 0;
+}
+
+.main-content-list a {
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+    margin-left: 5em;
+    margin-bottom: 2em;
+    text-align: center;
+    text-decoration: none;
+    border: 0;
+    width: 20%;
+    padding: 15px 35px;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border-radius: 100px;
+    color: #fff;
+    cursor: pointer;  
+    background-color: #686868;  
+    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+    box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+}
+
+.main-content-list a:hover {
+    box-shadow: 0.50rem 0.50rem 20px gray;
 }
 
 @media screen and (max-width: 768px) {
@@ -430,6 +458,7 @@ h1, h2, h3, h4, h5, h6 {
     .main-working {
         display: flex;
         flex-direction: column;
+        padding: 1em;
     }
 
     .working ul {
@@ -440,7 +469,6 @@ h1, h2, h3, h4, h5, h6 {
         display: flex;
         position: relative;
         background-color: #f5f5f5;
-        width: 90%;
         border-radius: 5px 5px 5px 5px;
         padding: 20px 30px;
         margin-top: 1em;
@@ -483,6 +511,7 @@ h1, h2, h3, h4, h5, h6 {
         width: 100%;
         background-color: #f5f5f5;
         margin-top: 2em;
+        padding: 0.5em;
     }
 
     .restaurant-main-list h2 {
@@ -595,7 +624,6 @@ h1, h2, h3, h4, h5, h6 {
 
     .logo {
         display: block;
-        margin: auto;
         width: 200px;
         margin-top: 1em;
     }
@@ -754,6 +782,10 @@ h1, h2, h3, h4, h5, h6 {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+    }
+
+    .price {
+        font-weight: 500;
     }
 
     .main-dessert-list div:nth-child(1) {
