@@ -17,6 +17,103 @@ h1, h2, h3, h4, h5, h6 {
     margin: auto;
 }
 
+.loading-frame {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(0deg, #1b6150, #F2F2F2);
+    z-index: 100;
+    animation: fadeout 0.5s ease-in forwards;
+    animation-delay: 2s;
+}
+  
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.fa-heart:hover {
+    font-weight: 700;
+    background: linear-gradient(to bottom, white 50%, #9356DC 0%, #FF79DA) top;
+    background-size: 100% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: heart 0.5s ease-in-out forwards;
+}
+  
+@keyframes heart {
+    from {
+        background-position: top;
+    }
+    to {
+        background-position: bottom;
+    }
+}
+
+.main-content-list .main-entries:nth-child(2) {
+    animation: menu 1s linear forwards;
+}
+
+.main-content-list .main-entries:nth-child(3) {
+    animation: menu 1s linear forwards;
+    animation-delay: 0.25s;
+}
+
+.main-content-list .main-entries:nth-child(4) {
+    animation: menu 1s linear forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes menu {
+    from {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+    }
+}
+
 .main-button {
     min-width: 200px;
     display: inline-block;
@@ -150,10 +247,15 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
 
-.working li :hover {
+.working-number:hover {
+    cursor: pointer;
     border-color: #deebff;
     color: #333;
-    background-color: #deebff;
+    background-color: rgba(147, 86, 220, 0.15);
+}
+
+.working-number:hover i {
+    color: #9356DC;
 }
 
 .working-number i {
@@ -217,6 +319,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #333;
     background-color: white;
     border-radius: 10px;
+    box-shadow: 0px 5px 10px 0px gainsboro;
 }
 
 .restaurant-main img {
@@ -251,14 +354,7 @@ h1, h2, h3, h4, h5, h6 {
     right: 30px;
     bottom: 40px;
     font-size: 20px;
-    transition-duration: 25s;
-}
-
-.restaurant-main i :before {
-    opacity: 0;
-    transition: .5s;
-    content: "";
-    background: linear-gradient(0deg,#9356dc,#ff79da);
+    padding: 1px;
 }
 
 .footer {
@@ -339,6 +435,7 @@ h1, h2, h3, h4, h5, h6 {
 .main-content-list-header i {
     font-size: 30px;
     cursor: pointer;
+    padding: 1px;
 }
 
 .main-entries {
@@ -346,6 +443,8 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     flex-direction: column;
     padding: 20px;
+    opacity: 0;
+    visibility: hidden;
 }
 
 .main-entries h3 {
@@ -374,14 +473,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .main-entries-list:hover .checked {
-    width: 100px;
+    width: 80px;
     opacity: 1;
-    transition-duration: 1s;
+    transition-duration: 0.7s;
 }
 
 .main-entries-list:hover .checked i {
     transform: rotate(360deg);
-    transition-duration: 1s;
+    transition-duration: 0.7s;
 }
 
 .main-entries-list div:nth-child(1) {
@@ -426,6 +525,10 @@ h1, h2, h3, h4, h5, h6 {
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
     opacity: 0;
+}
+
+.checked i {
+    font-size: 1.5em;
 }
 
 .order {
