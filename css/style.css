@@ -177,6 +177,10 @@ h1, h2, h3, h4, h5, h6 {
     flex-grow: 1;
 }
 
+.action-link i {
+    color: #333;
+}
+
 .brand {
     font-family: 'shrikhand' ,sans-serif;
 }
