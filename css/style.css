@@ -138,7 +138,7 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
 
-.main-div {
+.main-header {
     display: flex;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     position: sticky;
@@ -147,18 +147,18 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 10;
 }
 
-.main-div div {
+.main-header div {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.main-div .action-link {
+.main-header .action-link {
     width: 4em;
     height: 4em;
 }
 
-.main-div .action-link a {
+.main-header.action-link a {
     display: flex;
     color: #333;
     width: 4em;
@@ -169,11 +169,16 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
 }
 
-.main-div .brand {
+.main-header .brand {
     flex-grow: 1;
 }
 
-.main-header {
+.brand {
+    font-family: 'shrikhand' ,sans-serif;
+}
+
+
+.main-div {
     display: block;
     text-align: center;
     background-color: #fafafa;
@@ -201,16 +206,17 @@ h1, h2, h3, h4, h5, h6 {
     border: none;
     font-weight: bold;
     color: #000;
+    font-family: 'Roboto', sans-serif;
 }
 
-.main-header h2 {
+.main-div h2 {
     font-size: 1.5em;
     margin-top: 2em;
     margin-bottom: 1em;
     font-weight: bold;
 }
 
-.main-header p {
+.main-div p {
     font-weight: 300;
     margin-bottom: 3em;
 }
@@ -241,7 +247,7 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     background-color: #f5f5f5;
     width: 100%;
-    border-radius: 5px 5px 5px 5px;
+    border-radius: 15px 15px 15px 15px;
     padding: 20px;
     margin-top: 1em;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
@@ -261,6 +267,7 @@ h1, h2, h3, h4, h5, h6 {
 .working-number i {
     display: block;
     width: 20px;
+    color: #646464;
 }
 
 .working-number p {
@@ -336,6 +343,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 5px;
     background-color: #99e2d0;
     color: #1b6150;
+    font-weight: bold;
 }
 
 .restaurant-main h3 {
@@ -394,17 +402,19 @@ h1, h2, h3, h4, h5, h6 {
 
 /*cartes*/
 
-.main-div-logo i {
-    display: flex;
-    position: absolute;
-    left: 15px;
-    top: 40px;
-    font-size: 1.2rem;
-    color: #000;
+.brand h1 {
+    font-size: 2em;
+    font-weight: 400;
 }
 
+
 .main-header-photo img {
-    max-width: 100%;
+    max-height: 380px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.main-header-photo- img {
     max-height: 380px;
     width: 100%;
     object-fit: cover;
@@ -522,7 +532,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 0;
     font-weight: 600;
     color: white;
-    background-color: aquamarine;
+    background-color: #99E2D0;
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
     opacity: 0;
@@ -543,6 +553,20 @@ h1, h2, h3, h4, h5, h6 {
     .container {
         width: 100%;
         padding: 0;
+    }
+
+    .brand h1 {
+        font-size: 1.5em;
+        font-weight: 400;
+    }
+
+    .main-div h2 {
+        font-size: 2em;
+    }
+
+    .main-div p {
+        font-weight: 300;
+        font-size: 20px;
     }
 
     .search-form input {
@@ -603,6 +627,15 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     /*Cartes*/
+
+    .brand {
+        font-size: 1.3em;
+    }
+    
+    
+    .main-header-photo- img {
+        max-height: 250px;
+    }
 
     .main-div-logo i {
         left: 5px;
